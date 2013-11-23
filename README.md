@@ -104,17 +104,23 @@ horarios de entrega en los Locales registrados.
 
 ## Instalacion en ubuntu
 
-* mongodb: sudo apt-get install -y mongodb
-* npm: sudo apt-get install -y npm
-* nodejs:
+1. nodejs:
     1. sudo apt-get install -y nodejs
     2. sudo apt-get update
     3. sudo apt-get install -y python-software-properties python g++ make
     4. sudo add-apt-repository -y ppa:chris-lea/node.js
     5. sudo apt-get update
     6. sudo apt-get install -y nodejs
-* angular
+2. mongodb: sudo apt-get install -y mongodb
+3. dependencias del proyecto (express, mongodb):
+    1. cd ./api
+    2. npm install
 
+## Instalacion vagrant
+1. VirtualBox.
+2. Vagrant.
+3. creando maquina virtual: vagrant box add tianguis_ubuntu_1204_32 http://files.vagrantup.com/precise32.box
+4. vagrant up
 
 #instalacion en debian wheezy
   #install nodejs from wheezy-backports
