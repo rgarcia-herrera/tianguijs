@@ -103,3 +103,14 @@ Tianguis orgánico virtual
     5. sudo apt-get update
     6. sudo apt-get install -y nodejs
 * angular
+
+
+#instalacion en debian wheezy
+  #install nodejs from wheezy-backports
+  #https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#backports
+
+  sudo add-apt-repository 'deb http://ftp.us.debian.org/debian wheezy-backports main'
+
+  #install npm
+  sudo apt-get install curl
+  curl https://npmjs.org/install.sh | sudo sh
