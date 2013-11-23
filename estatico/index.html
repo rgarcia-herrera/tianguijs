@@ -2,11 +2,11 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="tng"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>{{titulo}}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,6 +19,7 @@
         <!-- Le Javascript -->
         <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
         <script src="bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -26,6 +27,19 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <div ng-controller="Menu">
+            <div ng-if="loggedOn">
+               <!--  Menú para el usuario logeado -->
+               <button ng-click="doLogout()">Adios</button>
+            </div>
+            <div ng-if="!loggedOn">
+                Abre Sesi&oacute;n con el Tiaguis
+               <!--  Formulario para que el usuario se logee -->
+               <input type="text" size="20" ng-model="username"/>
+               <input type="password" size="20" ng-model="password" />
+               <button ng-click="doLogin()">Vamos !</button> 
+            </div>
+        </div>
         <p>Bienvenidos al Tianguis Digital</p>
 
 
