@@ -11,10 +11,12 @@ orgánicos a productores o distribuidores, y sus entregas al Consumidor
 en Locales registrados. Se buscará optimizar precios acuerpando la
 demana de los Consumidores para comprar a precios de mayoreo.
 
-Objetivos específicos * Gestión de Pedidos del Consumidor a diferentes
-Locales * Gestión de Grandes Pedidos de Locatarios a Productores *
-Gestión de Entregas para Productores * Herramientas de análisis para
-todos * Directorio de Consumidores - Locatarios - Productores
+### Objetivos específicos
+* Gestión de Pedidos del Consumidor a diferentes Locales
+* Gestión de Grandes Pedidos de Locatarios a Productores 
+* Gestión de Entregas para Productores
+* Herramientas de análisis para todos
+* Directorio de Consumidores - Locatarios - Productores
 
 
 ## Actores
@@ -88,7 +90,7 @@ horarios de entrega en los Locales registrados.
 
 
 
-Futuros Desarrollos
+## Futuros Desarrollos
 
 	* Tener listas-plantilla, que puedas re-someter. Basarte en
 	* pedidos anteriores para generar nuevos.  Conectar con
