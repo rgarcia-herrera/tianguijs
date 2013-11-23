@@ -100,10 +100,9 @@ Tianguis orgánico virtual
     4. sudo add-apt-repository -y ppa:chris-lea/node.js
     5. sudo apt-get update
     6. sudo apt-get install -y nodejs
-2. npm: sudo apt-get install -y npm
-3. mongodb: sudo apt-get install -y mongodb
-4. dependencias del proyecto (express, mongodb):
-    1. cd api
+2. mongodb: sudo apt-get install -y mongodb
+3. dependencias del proyecto (express, mongodb):
+    1. cd ./api
     2. npm install
 
 ## Instalacion vagrant
@@ -111,3 +110,13 @@ Tianguis orgánico virtual
 2. Vagrant.
 3. creando maquina virtual: vagrant box add tianguis_ubuntu_1204_32 http://files.vagrantup.com/precise32.box
 4. vagrant up
+
+#instalacion en debian wheezy
+  #install nodejs from wheezy-backports
+  #https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#backports
+
+  sudo add-apt-repository 'deb http://ftp.us.debian.org/debian wheezy-backports main'
+
+  #install npm
+  sudo apt-get install curl
+  curl https://npmjs.org/install.sh | sudo sh
