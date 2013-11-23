@@ -1,0 +1,14 @@
+{
+    "name": "Frontend Tiaguis",
+    "version": "1.0.0",
+    "main": "css/main.css",
+    "ignore": [
+          ".jshintrc",
+        "**/*.txt"
+            
+    ],
+    "dependencies": {
+    	"angular": "1.2.2",
+    	"angular-route" : "1.2.2"
+    }
+}
