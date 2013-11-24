@@ -2,6 +2,7 @@
     "name": "tianguis",
     "dependencies": {
     	"express": "",
-    	"mongodb": ""
+    	"mongodb": "",
+    	"connect-mongo" : ""
 	}
 }

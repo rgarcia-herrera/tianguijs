@@ -14,17 +14,22 @@ var tng = angular.module('tng', []);
 =            Servicios            =
 =================================*/
 
-tng.service("Auth",function(){
+tng.service("Auth",function($http){
 	var retval = {
 		loggedOn : false,
 		userData : {},
-		login : function($username,$password){
-			console.log("Ok ya recibi",$username,$password);
-			retval.loggedOn = true;
+		login : function(username,password){
 			//hacemos login (lado Server)
 			// @todo
+			$http.post("/login",{"username" : username, "password" : password}).success(function(data){
+				retval.loggedOn = true;
+				retval.userData = data;
+			}).error(function(error){
+				alert("no fue posible abrir sesion .. !!");
+			});
 		},
 		logout : function(){
+			console.log("Cerramos Sesión !");
 			//hacemos el logout (lado Cliete)
 			retval.loggedOn = false;
 			retval.userData = {};
@@ -38,22 +43,12 @@ tng.service("Auth",function(){
 /*-----  End of Servicios  ------*/
 
 
-
 /*=====================================
 =            Controladores            =
 =====================================*/
 
 tng.controller("Menu", function($scope, Auth){
-	$scope.loggedOn = Auth.loggedOn;
-	$scope.username = Auth.userData.username || ""; 
-	$scope.password = ""; 
-	console.log($scope);
-	$scope.doLogin = function(){
-		Auth.login($scope.username,$scope.password);
-	};
-	$scope.doLogout = function(){
-		Auth.logout();
-	};
+	$scope.auth = Auth;
 });
 tng.controller("Carrito", function($scope){
 	

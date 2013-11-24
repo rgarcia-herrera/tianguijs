@@ -28,16 +28,17 @@
 
         <!-- Add your site or application content here -->
         <div ng-controller="Menu">
-            <div ng-if="loggedOn">
+            <div ng-if="auth.loggedOn">
                <!--  Menú para el usuario logeado -->
-               <button ng-click="doLogout()">Adios</button>
+               {{auth.userData.username}}
+               <button ng-click="auth.logout()">Adios</button>
             </div>
-            <div ng-if="!loggedOn">
+            <div ng-if="!auth.loggedOn">
                 Abre Sesi&oacute;n con el Tiaguis
                <!--  Formulario para que el usuario se logee -->
                <input type="text" size="20" ng-model="username"/>
                <input type="password" size="20" ng-model="password" />
-               <button ng-click="doLogin()">Vamos !</button> 
+               <button ng-click="auth.login(username,password)">Vamos !</button> 
             </div>
         </div>
         <p>Bienvenidos al Tianguis Digital</p>
